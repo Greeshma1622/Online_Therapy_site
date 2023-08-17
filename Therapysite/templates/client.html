@@ -1,0 +1,31 @@
+{% extends 'staffbase.html'%}
+
+{% block title %}Client{% endblock %}
+
+{% block content%}
+<h1 class="text-center">Client Details</h1>
+    <table class="container table table-dark table-stripped text-center">
+        <tr>
+            <th>CLIENT NAME</th>
+            <th>CLIENT EMAIL</th>
+            <th>CLIENT PHONE NO.</th>
+        <tr>
+        {% for i in  consumer %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.phno}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endblock%}
+    {% comment %} <table class="container table table-dark table-stripped text-center">
+        <tr>
+            <th>ROOM NAME</th>
+        <tr>
+        {% for i in  consumer %}
+        <tr>
+            <td>{{i.name}}</td>
+        </tr>
+        {% endfor %}
+    </table> {% endcomment %}
